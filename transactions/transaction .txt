@@ -1,0 +1,6 @@
+john 20.5
+charles 10.5
+sharon 10
+john 15.5
+charles 18
+mary 25
