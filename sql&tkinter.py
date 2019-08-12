@@ -5,11 +5,7 @@ from tkinter import messagebox
 import sqlite3
 
 def Book():
-	#print("Hello there")
-	
 	curItem=tree1.selection()
-	#print(len(curItem))
-	
 	name=txtName.get()
 	chkinDate=txtCheckin.get()
 	chkoutDate=txtCheckout.get()
@@ -24,11 +20,7 @@ def Book():
 		conn.execute(sql,(name,chkinDate,chkoutDate,curItem[0]))
 		conn.commit()
 		messagebox.showinfo("Booking","Hi "+name+". Your booking for "+curItem[0]+" room from "+chkinDate+" to "+chkoutDate+" is confirmed! See you soon!")
-	
-	#print(curItem[0]) #gets the iid
-
-	#tree1.delete(*tree1.get_children())
-	#tree1.insert("",0,text="New Room",iid="Single")
+		
 
 def loadTreeData():
 
@@ -39,8 +31,6 @@ def loadTreeData():
 
 	sql="select * from RoomType"
 	conn.row_factory = sqlite3.Row
-	#cursor.execute(sql)
-	#rows=cursor.fetchall()
 	rows=conn.execute(sql)
 
 	i=0
