@@ -11,7 +11,7 @@ def getage(self):
     return self.__age
 
 def getdiploma(self):
-    return sef.__diploma
+    return self.__diploma
 
 # def setname(self,name):
 #     self.__name=name
